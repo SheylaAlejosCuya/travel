@@ -1,0 +1,70 @@
+body{
+
+}
+header{
+    background-image: url('images/macchu.png');
+    background-position: center center;
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-color: #464646;
+    color: rgba(0, 0, 0, 0.5);   
+
+}
+.nav-link{
+    background: #1a3898;
+}
+.nav-item a{
+    color: white;
+}
+.nav-item a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.text{
+    text-align: center;
+    display: table-cell;
+    width: calc(100vw - 10px);
+    height: calc(100vh - 10px);
+    vertical-align: middle;
+    font-size: calc(1.5rem + 1.5vw);
+}
+#p{
+    font-size: 1em;
+   color: white;
+}
+#central{
+    color: #a8cf45;
+    font-size: 1.5em
+}
+h1{
+    text-align: center;
+    color: #1a3898;   
+    font-style: italic;
+}
+#subtibarra{
+    background: #a8cf45;
+    width: 150px;
+    height: 5px;
+
+}
+.footer{
+    background-image: url('images/fondoavion.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    height: 429px;
+    color: white;
+    line-height: 2rem;
+    padding: 5%;;
+    text-align: left;
+}
+.copy hr{
+
+    background: white;
+   
+}
+.copy{
+    padding-top: 3%;
+    text-align: center;
+}
