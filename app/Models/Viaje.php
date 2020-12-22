@@ -10,6 +10,6 @@ class Viaje extends Model
     use HasFactory;
     protected $guarded = [];
     public function getRouteKeyName(){
-        return 'title'; 
+        return 'id'; 
     }
 }

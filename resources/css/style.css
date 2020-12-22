@@ -39,12 +39,10 @@ header{
 h1{
     text-align: center;
     color: #1a3898;   
-    font-style: italic;
 }
 #subtibarra{
     background: #a8cf45;
-    width: 150px;
-    height: 5px;
+
 
 }
 .footer{

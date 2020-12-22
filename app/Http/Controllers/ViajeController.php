@@ -9,24 +9,39 @@ use App\Http\Requests\SaveProjectRequest;
 
 class ViajeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('home','modal');
+
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $viajes = Viaje::latest('updated_at','ASC')->get();
         return view('index', compact('viajes'));
         
     }
+    //////Para el publico////
     public function home()
     {
         $viajes = Viaje::latest('updated_at','ASC')->get();
         return view('home', compact('viajes'));
         
     }
+    public function modal(Viaje $viaje)
+    {
 
+       return view('partials/modal', [
+           'viaje' => $viaje
+       ]);
+       
+    }
+    //////Fin publico/////
     /**
      * Show the form for creating a new resource.
      *

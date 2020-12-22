@@ -5,11 +5,11 @@
     <hr>
     <div class="row">
         <div class="col">
-            <img src="{{ asset(Storage::url($viaje->image))}}" alt="" width="500px">
+            <img src="{{ asset(Storage::url($viaje->image))}}" alt="" width="100%">
           </div>
         <div class="col">
           <p>Descripción:</p>
-           <p>{{ $viaje->descripcion}}</p>
+           <p style="white-space: pre-line;">{{ $viaje->descripcion}}</p>
            <div class="row">
                <div class="col">
                 <a href="{{ route('viaje.edit', $viaje)}}" type="button" class="btn btn-outline-info  btn-lg btn-block">Editar</a>
