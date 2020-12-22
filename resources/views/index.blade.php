@@ -27,7 +27,7 @@
       <td>{{ $viaje->title}}       </td>
       <td>{{ $viaje->descripcion}}       </td>
       <td> <img src="{{ asset(Storage::url($viaje->image))}}" alt="" width="50px"></td>
-      <td> <a href="{{ route('viaje.show',$viaje)}}">Detalles</a></td>
+      <td> <a href="{{ route('viaje.show', $viaje)}}">Detalles</a></td>
     </tr>
  
     @empty
@@ -37,6 +37,9 @@
       </tbody>
     </table>
   </div>
+  @auth
+      {{auth()->user()->index}}
+  @endauth
 </section>
 {{-- datos 
 

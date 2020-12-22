@@ -17,10 +17,13 @@ use App\Http\Controllers\ViajeController;
 
 //Route::view('/viajes', 'viajes')->name('viajes');
 Route::get('home', function () {
-    return view('home');
+    return view('home')->name('home');
 });
+//Route::view('nosotros', function () {    return view('nosotros');});
+Route::view('/nosotros', 'nosotros')->name('nosotros');
+Route::view('/viajes', 'viajes')->name('viajes');
+//vistas
 
-//vitas
 Route::get('/viajes', [ViajeController::class, 'index'])->name('viaje.index');
 Route::get('/home', [ViajeController::class, 'home'])->name('viaje.home');
 //crear
@@ -36,4 +39,7 @@ Route::get('/viajes/{viaje}', [ViajeController::class, 'show'])->name('viaje.sho
 
 ////
 Route::post('/viajes', [ViajeController::class, 'store'])->name('viaje.store');
+
+//login routes
+Auth::routes();
 

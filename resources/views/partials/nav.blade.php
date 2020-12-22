@@ -5,8 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_slider.css"/>
+    <link rel="stylesheet" href="css/lightslider.css"/>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+   
 
     <title>Travel</title>
     <link rel="shortcut icon" href="images/logo-travel.png" />
@@ -21,11 +25,11 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
+           
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item ">                   
-                  <a class="nav-link" href="#" style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"> <img src="images/nosotros.png" alt="" width="28px" class="d-inline-block align-top">Nosotros </a>
+                  <a class="nav-link" href="{{ route('nosotros')}}" style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"> <img src="images/nosotros.png" alt="" width="28px" class="d-inline-block align-top">Nosotros </a>
                 </li>
                
                 <li class="nav-item">
@@ -44,8 +48,8 @@
               
           </div>
           <div style="text-align: right; padding-right: 2%;"> 
-            <img src="images/wsp.png" alt="" width="70px" height="65px"><br>
-            <img src="images/msn.png" alt="" width="70px" height="65px">
+           <a href="https://api.whatsapp.com/send?phone=994329023&text=¿Pueden ayudarme?"></a> <img src="images/wsp.png" alt="" width="70px" height="65px"><br>
+            <a href="https://www.facebook.com/messages/t/102505857929054" target="_blank"><img src="images/msn.png" alt="" width="70px" height="65px"></a>
             
           </div>
     </header>
