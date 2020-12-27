@@ -16,7 +16,7 @@ a{
 }
 
 .box{
-  height:700px;
+  height:800px;
 	background-color:#ffffff;
 	border-radius: 10px;
 	box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
