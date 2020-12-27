@@ -18,7 +18,7 @@
   <body>
       <header>
         <nav class="navbar navbar-expand-lg bg-ligth">
-            <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{ route('viaje.home')}}">
                 <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
                 
               </a>
@@ -33,7 +33,7 @@
                 </li>
                
                 <li class="nav-item">
-                  <a class="nav-link " href="#" style="border-bottom-right-radius: 15px; border-top-right-radius: 15px;"> <img src="images/pregunta.png" alt="" width="20px" class="d-inline-block align-top">Contacto</a>
+                  <a class="nav-link " href="{{ route('contacto')}}" style="border-bottom-right-radius: 15px; border-top-right-radius: 15px;"> <img src="images/pregunta.png" alt="" width="20px" class="d-inline-block align-top">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -48,7 +48,7 @@
               
           </div>
           <div style="text-align: right; padding-right: 2%;"> 
-           <a href="https://api.whatsapp.com/send?phone=994329023&text=¿Pueden ayudarme?"></a> <img src="images/wsp.png" alt="" width="70px" height="65px"><br>
+           <a href="wa.link/fbxsb6"><img src="images/wsp.png" alt="" width="70px" height="65px"><br></a> 
             <a href="https://www.facebook.com/messages/t/102505857929054" target="_blank"><img src="images/msn.png" alt="" width="70px" height="65px"></a>
             
           </div>

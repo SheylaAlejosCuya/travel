@@ -42,20 +42,20 @@ h1{
 }
 #subtibarra{
     background: #a8cf45;
-    width: 150px;
-    height: 5px;
+   
 
 }
 .footer{
-    background-image: url('../images/fondoavion.png');
+    background-image: url('../images/abajo.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
-    height: 429px;
+   
     color: white;
     line-height: 2rem;
     padding: 5%;;
+    padding-bottom: 1%;
     text-align: left;
 }
 .copy hr{
@@ -70,3 +70,15 @@ h1{
 .viajes{
     text-align: center;
 }
+#nosotros{
+    background-image: url('../images/fondoInfo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    height: 700px;
+    color: white;
+    text-align: left;
+    
+}
+

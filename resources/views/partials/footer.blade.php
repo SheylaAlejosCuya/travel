@@ -17,6 +17,11 @@
     </div>
     <div class="copy">
       <hr>
+      <div class="row" style="text-aling: center">
+        <img src="images/fb.png" alt="" width="30px" height="30px">
+        <img src="images/ig.png" alt="" width="30px" height="30px">
+        <img src="images/wspFooter.png" alt="" width="30px" height="30px">
+      </div>
       <p>Copyright <b>Appsitec</b> Todos los derechos reservados © 2020</p>
     </div>
     

@@ -21,6 +21,7 @@ Route::get('home', function () {
 });
 //Route::view('nosotros', function () {    return view('nosotros');});
 Route::view('/nosotros', 'nosotros')->name('nosotros');
+Route::view('/contacto', 'contacto')->name('contacto');
 Route::view('/viajes', 'viajes')->name('viajes');
 //vistas
 

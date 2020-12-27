@@ -10,11 +10,13 @@ ul{
 	list-style:none;
 }
 a{
-	text-decoration:none;
+  text-decoration:none;
+  height: 100%;
+  width:auto; 
 }
 
 .box{
-	width:auto;
+  height:700px;
 	background-color:#ffffff;
 	border-radius: 10px;
 	box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
@@ -23,76 +25,31 @@ a{
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
-	margin: 20px 10px;
+	margin: 0px;
 }
 .model{
-	height: 700px;
+  height: 100%;
+  width: auto;
 	max-height: 100%;
 	max-width: 100%;
 }
-.details{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 300px;
-}
-.details p{
-	font-family: calibri;
-	font-weight: bold;
-	color:#6a6a74;
-	text-align: center;
-	margin-top: 20px;
-}
-.marvel{
-	color:#32323e;
-	font-weight: bold;
-	letter-spacing: 2px;
-	font-family: bebas kai;
-	font-size: 25px;
-}
-.marvel:hover{
-	color:#fff;
-	font-weight: bold;
-	letter-spacing: 2px;
-	font-family: bebas kai;
-	font-size: 25px;
-}
-.logo{
-	height: 60px;
-}
-.box:hover{
-  background-color:#1a3898; 
-  color:#fff;
-	transform-style: preserve-3d;
-	transform: scale(1.02);
-	transition: all ease 0.3s;
-}
-.details p:hover{
-  font-family: calibri;
-	font-weight: bold;
-	color:#fff;
-	text-align: center;
-	margin-top: 20px;
-}
-.box:hover .marvel{
-	color:#fffff;
-	transition: all ease 0.5s;
-}
-/*--responsive for mobile phone-
+
+
 @media(max-width:520px){
-	.box{
-		width: 94%;
-		height: 800px;
-	}
-	.model{
-		height:600px;
-	}
-	.details p{
-		font-size: 16px;
-		width: 100px;
-	}
-	-*/
+  .model {
+    height:300px;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
+.box{
+  height: 300px;
+}
+}
+
+
+
+
 .card-img, .card-img-top {
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
@@ -124,7 +81,11 @@ a{
     height: auto;
     border-radius: 2rem;
 }
-.btn-primary {
+.btn-outline-primary {
+  color: #a8cf45;
+    border-color: #a8cf45;
+}
+.btn-outline-primary:hover {
     color: #fff;
     background-color: #a8cf45;
     border-color: #a8cf45;
@@ -133,15 +94,29 @@ a{
   text-align: center;
     color: #1a3898;
 }
+form{
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 15px;
+  padding: 3%;
+  margin-top:5%;
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #a8cf45;
+    border-color: #a8cf45;
+    
+}
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(168,207,69,.5);
+}
 
+}
 </style>
 <section class="buscaador">
     <div class="subtitulo">
       <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
-      <hr id="subtibarra">
-      
-     
-       <iframe src="http://startravelperu.clickandbook.com" frameborder="0" height="100%" width="100%" style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
+      <hr id="subtibarra"> 
+        <iframe src="http://startravelperu.clickandbook.com"  target="_blank" frameborder="0"  height="100%" style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
 </div>      
   </section>
 
@@ -197,7 +172,7 @@ comment  --}}
         <div class="modal-body" >
           <div class="row">
             <div class="col-lg" >
-              <img id="imagen" class="card-img-top img-fluid" style="width: 100%" style="margin-left: -550px; position:relative;">
+              <img id="imagen" class="card-img-top img-fluid" style="width: auto" height="100%" style="margin-left: -550px; position:relative;">
         
             </div>
             <div class="col" id="contenido">
@@ -205,7 +180,23 @@ comment  --}}
               <hr>
               <br>
               <p id="descripcion" style="white-space: pre-line;"></p>
-            <button type="button" class="btn btn-primary">Consultar disponibilidad</button>
+              
+              <form>
+               <p>Reservar vuelo:</p>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Nombres">
+                  </div>
+                  <div  class="col">
+                    <input type="email" class="form-control" placeholder="Correo">
+                  </div>
+                </div>
+                  <div>
+                   </div>
+                  <br>
+                  <button type="button" class="btn btn-outline-primary btn-lg btn-block">Consultar disponibilidad</button>
+              </form>
+            
           
             </div>
           </div>
@@ -233,8 +224,8 @@ comment  --}}
     <a type="button" class="btn_modal_mostrar" href="#"
     data-title="{{$viaje->title}}"
     data-descripcion="{{$viaje->descripcion}}"
-    data-image="{{ asset(Storage::url($viaje->image))}}" > 
-    <img  src="{{ asset(Storage::url($viaje->image))}}" class="model" alt="..."> </a>
+    data-image="{{ asset(Storage::url($viaje->image))}}"  > 
+    <img  src="{{ asset(Storage::url($viaje->image))}}" class="model" alt="..." > </a>
     <!--details
 		<div class="details">		
     <p>{{ $viaje->updated_at->diffForHumans()}}</p>
