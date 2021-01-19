@@ -15,29 +15,35 @@
     <title>Travel</title>
     <link rel="shortcut icon" href="images/logo-travel.png" />
   </head>
+  <style>
+
+  </style>
   <body>
       <header>
-        <nav class="navbar navbar-expand-lg bg-ligth">
-          <a class="navbar-brand" href="{{ route('viaje.home')}}">
-                <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
-                
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+       
+    <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
+      <a class="navbar-brand" href="{{ route('travel')}}">
+          <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
+          
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item ">                   
+              <a class="nav-link" href="{{ route('nosotros')}}" id="nosotrosText"> <img src="images/nosotros.png" width="30"  style="margin-right: 5px;" class="d-inline-block align-top" alt="">Nosotros </a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link " href="{{ route('viaje.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link " href="{{ route('contacto')}}" id="contactoText"> <img src="images/pregunta.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Contacto</a>
+            </li>
            
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item ">                   
-                  <a class="nav-link" href="{{ route('nosotros')}}" style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"> <img src="images/nosotros.png" alt="" width="28px" class="d-inline-block align-top">Nosotros </a>
-                </li>
-               
-                <li class="nav-item">
-                  <a class="nav-link " href="{{ route('contacto')}}" style="border-bottom-right-radius: 15px; border-top-right-radius: 15px;"> <img src="images/pregunta.png" alt="" width="20px" class="d-inline-block align-top">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+          </ul>
+        </div>
+      </nav>
           <div class="text">
             <div id="p">
               <b>REDESCUBRE LA MANERA DE VIAJAR</b>

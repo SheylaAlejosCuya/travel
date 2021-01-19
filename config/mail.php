@@ -5,7 +5,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
-    |--------------------------------------------------------------------------
+    |-------------------------------------------------------------------------
     |
     | This option controls the default mailer that is used to send any email
     | messages sent by your application. Alternative mailers may be setup
@@ -36,9 +36,9 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+            'port' => env('MAIL_PORT', 465),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'zurang.sheyla@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Star Travel'),
     ],
 
     /*

@@ -112,13 +112,6 @@ form{
 
 }
 </style>
-<section class="buscaador">
-    <div class="subtitulo">
-      <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
-      <hr id="subtibarra"> 
-        <iframe src="http://startravelperu.clickandbook.com"  target="_blank" frameborder="0"  height="100%" style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
-</div>      
-  </section>
 
   {{-- comment 
   <section class="container-fluid viajes">
@@ -177,24 +170,42 @@ comment  --}}
             </div>
             <div class="col" id="contenido">
               <h1 class="modal-title" id='title_modal'>Modal title</h1>
+              
               <hr>
               <br>
               <p id="descripcion" style="white-space: pre-line;"></p>
               
-              <form>
-               <p>Reservar vuelo:</p>
+              <form action="{{route('viaje.reserva')}}" method="POST">
+                @csrf
+               <p>Reservar vuelo:</p> 
+               
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Nombres">
+                    <input type="text" id='title_modale' hidden name="viaje">
+                    <input type="text" class="form-control" name="nombre" placeholder="Nombres">
+                    {!! $errors->first('nombre','<small>:message</small><br>')!!}
                   </div>
                   <div  class="col">
-                    <input type="email" class="form-control" placeholder="Correo">
+                    <input type="apellido" class="form-control" name="apellido" placeholder="Apellido">
+                    {!! $errors->first('apellido','<small>:message</small><br>')!!}
                   </div>
                 </div>
-                  <div>
-                   </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="email" class="form-control" name="correo" placeholder="Correo">
+                    {!! $errors->first('correo','<small>:message</small><br>')!!}
+                  </div>
+                  <div  class="col">
+                    <input type="text" class="form-control" name="telefono" placeholder="Telefono">
+                    {!! $errors->first('telefono','<small>:message</small><br>')!!}
+                  </div>
+                </div>
+                <br>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" name="content"></textarea>
+                {!! $errors->first('content','<small>:message</small><br>')!!}
                   <br>
-                  <button type="button" class="btn btn-outline-primary btn-lg btn-block">Consultar disponibilidad</button>
+                  <button  class="btn btn-outline-primary btn-lg btn-block">Enviar</button>
               </form>
             
           
@@ -222,9 +233,9 @@ comment  --}}
 		<div class="box">	
     <!--model-->
     <a type="button" class="btn_modal_mostrar" href="#"
-    data-title="{{$viaje->title}}"
-    data-descripcion="{{$viaje->descripcion}}"
-    data-image="{{ asset(Storage::url($viaje->image))}}"  > 
+      data-title="{{$viaje->title}}"
+      data-descripcion="{{$viaje->descripcion}}"
+      data-image="{{ asset(Storage::url($viaje->image))}}"  > 
     <img  src="{{ asset(Storage::url($viaje->image))}}" class="model" alt="..." > </a>
     <!--details
 		<div class="details">		
@@ -259,6 +270,7 @@ comment  --}}
       $('#modal_viajes').modal('show');
       console.log($(this).data('imagen'));
       $('#title_modal').text($(this).data('title'));
+      $('#title_modale').val($(this).data('title'));
       $('#descripcion').text($(this).data('descripcion'));
       $('#imagen').attr('src', $(this).data('image'));
   });
