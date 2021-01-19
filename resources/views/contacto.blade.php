@@ -61,52 +61,97 @@
     
     
 }
+
+#nosotrosText{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+}
+#contactoText {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+
+@media(max-width:1000px){
+    #nosotrosText, #contactoText {
+        border-radius:15px;
+        color: white;
+        margin-bottom:1.5px;
+        padding-left:5%;
+    }
+}
+
      </style>
 <section id="cont" class="container-fluid">
+ 
    
     <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
-        <a class="navbar-brand" href="{{ route('viaje.home')}}">
+        <a class="navbar-brand" href="{{ route('travel')}}">
             <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
             
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
               <li class="nav-item ">                   
-                <a class="nav-link" href="{{ route('nosotros')}}" style="border-bottom-left-radius: 15px; border-top-left-radius: 15px; color:white;"> <img src="images/nosotros.png" width="30"  class="d-inline-block align-top" alt="">Nosotros </a>
+                <a class="nav-link" href="{{ route('nosotros')}}" id="nosotrosText"> <img src="images/nosotros.png" width="30"  style="margin-right: 5px;" class="d-inline-block align-top" alt="">Nosotros </a>
               </li>
-             
+             <li class="nav-item">
+                <a class="nav-link " href="{{ route('viaje.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
+              </li> 
               <li class="nav-item">
-                <a class="nav-link " href="{{ route('contacto')}}" style="border-bottom-right-radius: 15px; border-top-right-radius: 15px; color:white;"> <img src="images/pregunta.png" alt="" width="20px" class="d-inline-block align-top">Contacto</a>
+                <a class="nav-link " href="{{ route('contacto')}}" id="contactoText"> <img src="images/pregunta.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Contacto</a>
               </li>
             </ul>
           </div>
         </nav>
-        
+
         <div class="padre" >
-           
             <div class="hijo">
                 <div class="form" style="  text-align: center; ">
-                    <form>
+                  {{-- FORMULARIO --}}
+                 
+                    <form class="formulario-contacto" action="{{route('viaje.contact')}}" method="POST">
+                     @csrf
+                     
                         <h1>Contacto</h1>
-        <hr>
+                         <hr>
+                         @if(Session::has('flash_message'))
+                         <div class="alert alert-success" role="alert">
+                        {{Session::get('flash_message')}}
+                      </div>
+                       @endif
+                        <div>
+                          <input type="text" class="form-control" name="name" placeholder="Nombres  Apellido"> <br>
+                          {!! $errors->first('name','<small style="color:red;">:message</small><br>')!!}
+                        </div>
                         <div class="form-row">
+
                           <div class="col">
-                            <input type="text" class="form-control" placeholder="Asunto">
+                            <input type="text" class="form-control" name="subject" placeholder="Asunto">
+                            {!! $errors->first('subject','<small style="color:red;">:message</small><br>')!!}
                           </div>
                           <div  class="col">
-                            <input type="email" class="form-control" placeholder="Correo">
+                            <input type="email" class="form-control" placeholder="Correo" name="email">
+                            {!! $errors->first('email','<small style="color:red;">:message</small><br>')!!}
                           </div>
                         </div>
                           <div>
                               <br>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" name="content"></textarea>
+                            {!! $errors->first('content','<small style="color:red;">:message</small><br>')!!}
                           </div>
+                         
                           <br>
-                          <button type="button" class="btn btn-outline-primary btn-lg btn-block">Enviar Mensaje  </button>
+                          <button class="btn btn-outline-primary btn-lg btn-block">Enviar Mensaje  </button>
+                           <br>
+                          
                       </form>
+                     
+                       {{-- FORMULARIO --}}
                       <div class="row" style="padding: 5%">
                     <div class="col-lg">
                         <img src="images/telefono.png" alt="">
@@ -129,34 +174,76 @@
    
 </section>
 <section class="container-fluid footer">
-    <div class="row">
-      <div class="col">
-        <img src="images/logo-travel.png" alt="" width="50%">
-      </div>
-      <div class="col">
-      <p><b>NUESTROS HOTELES</b></p>
-      <p>Tarapoto</p>
-      <p>Lambayeque</p>
-      <p>Piura</p>
-      </div>
-      <div class="col">
-        <p><b>CONTÁCTANOS</b></p>
-        <p>987 654 321</p>
-        <p>info@startravelperu.com</p>
-      </div>
+  <div class="row " style="padding-left: 5%">
+    <div class="col-lg">
+      <h4><strong>Nuestra empresa</strong></h4>
+      <br>
+      <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
+      <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
+      <a href="images/TerminosYCondiciones.pdf" target="_blank" style="color: white">Términos y Condiciones.</a><br>
+      <br>
     </div>
-    <div class="copy">
-      <hr>
-      <div class="redes" style="  text-align: center;r">
-        <a href="https://www.facebook.com/Startravel360" target="_blank"> <img src="images/fb.png" alt="" width="40px" height="40px"></a>
-        <a href="https://www.instagram.com/startravelperu" target="_blank"><img src="images/ig.png" alt="" width="40px" height="40px"></a>
-         <a href="wa.link/fbxsb6" target="_blank"><img src="images/wspFooter.png" alt="" width="40px" height="40px"></a>
-       </div>
-      <p>Copyright <b>Appsitec</b> Todos los derechos reservados © 2020</p>
-    </div>
+    <div class="col" style="text-align: center">
     
+      <a href="{{route('viaje.reclamo')}}"><img src="images/libroreclamaciones.png" alt="" width="50%" height="auto"></a>
+      <br>
+      </div>
+      <div class="col" style="text-align: center">      
+        <a href="{{ route('travel')}}"><img src="images/logo-travel.png" alt="" width="50%" height="auto"></a>       
+      <br>
+      </div>      
+  </div>
+  <div class="copy">
+    <hr>
+    <div class="redes" style="  text-align: center;r">
+     <a href="https://www.facebook.com/Startravel360" target="_blank"> <img src="images/fb.png" alt="" width="40px" height="40px"></a>
+     <a href="https://www.instagram.com/startravelperu" target="_blank"><img src="images/ig.png" alt="" width="40px" height="40px"></a>
+      <a href="wa.link/fbxsb6" target="_blank"><img src="images/wspFooter.png" alt="" width="40px" height="40px"></a>
+    </div>
+    <p>Copyright <b>Appsitec</b> Todos los derechos reservados © 2020</p>
+  </div>  
+  
 </section>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="{{asset('/js/jquery-3.5.1.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="{{asset('/js/lightslider.js')}}"></script>
+
+<script src="{{asset('js/scripte.js')}}" type="text/javascript"></script>
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+-->
+
+
+<script>
+  $(document).ready(function() {
+   
+      $(".formulario-contacto").bind("button", function(){
+        $.ajax({
+            type: $(this).attr("method"),
+            url: $(this).attr("action"),
+            data: $(this).serialize(),
+            success: function(respuesta) {
+              if(respuesta == "ok"){
+              $('#alerta').remove('hide').addClass("show");
+              $(".respuesta").html("Mensaje Enviado!");
+              $(".mensaje").html("El mensaje fue enviado correctamente.");  
+              }
+              
+            },
+            error: function(){
+              $('#alerta').remove('hide').addClass("show");
+              $(".respuesta").html("Error!");
+              $(".mensaje").html("El mensaje no fue enviado.");
+            }
+        });
+      });
+  });
+</script>
 </body>
 </html>

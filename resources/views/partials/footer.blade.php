@@ -1,29 +1,32 @@
 <section class="container-fluid footer">
-    <div class="row">
-      <div class="col">
-        <img src="images/logo-travel.png" alt="" width="50%">
+    <div class="row " style="padding-left: 5%">
+      <div class="col-lg">
+        <h4><strong>Nuestra empresa</strong></h4>
+        <br>
+        <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
+        <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
+        <a href="images/TerminosYCondiciones.pdf" target="_blank" style="color: white">Términos y Condiciones.</a><br>
+        <br>
       </div>
-      <div class="col">
-      <p><b>NUESTROS HOTELES</b></p>
-      <p>Tarapoto</p>
-      <p>Lambayeque</p>
-      <p>Piura</p>
+      <div class="col" style="text-align: center">
+      
+      <a href="{{route('viaje.reclamo')}}"><img src="images/libroreclamaciones.png" alt="" width="50%" height="auto"></a>
+      <br>
       </div>
-      <div class="col">
-        <p><b>CONTÁCTANOS</b></p>
-        <p>987 654 321</p>
-        <p>info@startravelperu.com</p>
-      </div>
+      <div class="col" style="text-align: center">      
+        <a href="{{ route('travel')}}"><img src="images/logo-travel.png" alt="" width="50%" height="auto"></a>        
+        <br>
+        </div>      
     </div>
     <div class="copy">
       <hr>
-      <div class="row" style="text-aling: center">
-        <img src="images/fb.png" alt="" width="30px" height="30px">
-        <img src="images/ig.png" alt="" width="30px" height="30px">
-        <img src="images/wspFooter.png" alt="" width="30px" height="30px">
+      <div class="redes" style="  text-align: center;r">
+       <a href="https://www.facebook.com/Startravel360" target="_blank"> <img src="images/fb.png" alt="" width="40px" height="40px"></a>
+       <a href="https://www.instagram.com/startravelperu" target="_blank"><img src="images/ig.png" alt="" width="40px" height="40px"></a>
+        <a href="wa.link/fbxsb6" target="_blank"><img src="images/wspFooter.png" alt="" width="40px" height="40px"></a>
       </div>
       <p>Copyright <b>Appsitec</b> Todos los derechos reservados © 2020</p>
-    </div>
+    </div>  
     
 </section>
    <!-- Optional JavaScript; choose one of the two! -->

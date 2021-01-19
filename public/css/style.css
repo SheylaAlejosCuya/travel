@@ -1,26 +1,28 @@
-body{
+body {}
 
-}
-header{
+header {
     background-image: url('../images/macchu.png');
     background-position: center center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
-    color: rgba(0, 0, 0, 0.5);   
-
+    color: rgba(0, 0, 0, 0.5);
 }
-.nav-link{
+
+.nav-link {
     background: #1a3898;
 }
-.nav-item a{
+
+.nav-item a {
     color: white;
 }
-.nav-item a:hover{
+
+.nav-item a:hover {
     color: white;
     text-decoration: underline;
 }
-.text{
+
+.text {
     text-align: center;
     display: table-cell;
     width: calc(100vw - 10px);
@@ -28,49 +30,54 @@ header{
     vertical-align: middle;
     font-size: calc(1.5rem + 1.5vw);
 }
-#p{
+
+#p {
     font-size: 1em;
-   color: white;
+    color: white;
 }
-#central{
+
+#central {
     color: #a8cf45;
     font-size: 1.5em
 }
-h1{
-    text-align: center;
-    color: #1a3898;   
-}
-#subtibarra{
-    background: #a8cf45;
-   
 
+h1 {
+    text-align: center;
+    color: #1a3898;
 }
-.footer{
+
+#subtibarra {
+    background: #a8cf45;
+}
+
+.footer {
     background-image: url('../images/abajo.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #464646;
-   
     color: white;
     line-height: 2rem;
-    padding: 5%;;
+    padding: 5%;
+    ;
     padding-bottom: 1%;
     text-align: left;
 }
-.copy hr{
 
+.copy hr {
     background: white;
-   
 }
-.copy{
+
+.copy {
     padding-top: 3%;
     text-align: center;
 }
-.viajes{
+
+.viajes {
     text-align: center;
 }
-#nosotros{
+
+#nosotros {
     background-image: url('../images/fondoInfo.png');
     background-position: center center;
     background-repeat: no-repeat;
@@ -79,6 +86,31 @@ h1{
     height: 700px;
     color: white;
     text-align: left;
-    
 }
 
+#nosotrosText {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+}
+
+#contactoText {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    color: white;
+}
+
+#homeText {
+    color: white;
+}
+
+@media(max-width:1000px) {
+    #nosotrosText,
+    #homeText,
+    #contactoText {
+        border-radius: 15px;
+        color: white;
+        margin-bottom: 1.5px;
+        padding-left: 5%;
+    }
+}
