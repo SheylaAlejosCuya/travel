@@ -38,7 +38,8 @@ class CorreosController extends Controller
           ]);
      
           Mail::to('zurang.sheyla@gmail.com')->send(new Reserva($vuelo));
-          return  "echo";
+          Session::flash('flash_message', 'Vuelo solicitado!');
+            return redirect('home');  
 
           }
           public function reclamo(EnviarCorreoRequest $request){
