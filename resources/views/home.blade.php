@@ -156,6 +156,11 @@ form{
 
   </section>
 comment  --}} 
+@if(Session::has('flash_message'))
+<div class="alert alert-success" role="alert">
+ <strong> <img src="images/comprobado.png" alt="" style="padding-left:15px; padding-right: 15px;"> {{Session::get('flash_message')}}</strong>
+</div>
+@endif
 <h1><b>Ofertas y Promociones</b></h1>
 <hr id="subtibarra">
   <div class="modal fade bd-example-modal-x " tabindex="-1" role="dialog" id='modal_viajes'>
