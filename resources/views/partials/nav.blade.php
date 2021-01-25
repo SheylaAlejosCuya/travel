@@ -19,8 +19,8 @@
 
   </style>
   <body>
+    
       <header>
-       
     <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
       <a class="navbar-brand" href="{{ route('travel')}}">
           <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">

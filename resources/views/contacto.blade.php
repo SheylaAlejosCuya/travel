@@ -180,16 +180,20 @@
       <br>
       <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
       <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
-      <a href="images/TerminosYCondiciones.pdf" target="_blank" style="color: white">Términos y Condiciones.</a><br>
+      <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >ESNA  </a><a href="images/Afiche-ESNNA-para-agencias-de-viajes.jpg"target="_blank" style="color: white">(Ver afiche)</a><br>
+      <a href="images/cokies-startravel-pagina-web-politica-2021.pdf" target="_blank" style="color: white">Politica de uso de cookies  </a><br>
+      <a href="images/condiciones-de-tratamiento-de-datos-de-web-startravel.pdf" target="_blank" style="color: white">Declaración de Tratamiento de Datos
+Personales   </a><br>
+      <a href="images/condiciones-web-startravel-2021.pdf" target="_blank" style="color: white">Términos y Condiciones.</a><br>
       <br>
     </div>
     <div class="col" style="text-align: center">
     
-      <a href="{{route('viaje.reclamo')}}"><img src="images/libroreclamaciones.png" alt="" width="50%" height="auto"></a>
-      <br>
-      </div>
-      <div class="col" style="text-align: center">      
-        <a href="{{ route('travel')}}"><img src="images/logo-travel.png" alt="" width="50%" height="auto"></a>       
+    <a href="{{route('viaje.reclamo')}}"><img src="images/libroreclamaciones.png" alt="" width="50%" height="auto"></a>
+    <br>
+    </div>
+    <div class="col" style="text-align: center">      
+      <a href="{{ route('travel')}}"><img src="images/logo-travel.png" alt="" width="50%" height="auto"></a>        
       <br>
       </div>      
   </div>
