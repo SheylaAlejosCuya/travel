@@ -54,7 +54,7 @@
               
           </div>
           <div style="text-align: right; padding-right: 2%;"> 
-           <a href="wa.link/fbxsb6"><img src="images/wsp.png" alt="" width="70px" height="65px"><br></a> 
+           <a href="https://api.whatsapp.com/send?phone=51994329023&text=Quiero%20informaci%C3%B3n%20de%20tus%20viajes.%20" target="_blank"><img src="images/wsp.png" alt="" width="70px" height="65px"><br></a> 
             <a href="https://www.facebook.com/messages/t/102505857929054" target="_blank"><img src="images/msn.png" alt="" width="70px" height="65px"></a>
             
           </div>
