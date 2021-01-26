@@ -48,7 +48,7 @@
             <div id="p">
               <b>REDESCUBRE LA MANERA DE VIAJAR</b>
               <br>
-              <b id="central">CON LA MEJOR COMPAÑIA</b>
+              <b id="central">CON STAR TRAVEL</b>
               <br>
               <b>¡SOLICITA TU PAQUETE AHORA!</b></p>
               

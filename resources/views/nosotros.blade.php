@@ -25,9 +25,22 @@
   /* IMPORTANTE */
   text-align: center;
 }
-
+#esnap{
+  position: absolute;
+      color:#1a3898;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: calc(1.5rem + 0.9vw);
+      text-decoration: underline;
+      padding-left: 25%;
 }
-     @media(max-width:520px){
+     
+#imagen{
+  background: #0d82c6;
+    padding: 2%;
+    border-radius: 15px;
+    }
+@media(max-width:920px){
     #nosotros{
     background-image: url('images/fondoInfo.png');
     background-position: center center;
@@ -38,9 +51,18 @@
     color: white;
     padding: 5%;;
     text-align: left;
-    
-}
+    }
+    #esna{
+      padding: 0%;
+    }
 
+    #imagen{
+      width: 100%;
+      margin-top: 5%;
+    }
+    #esnap{
+      padding-left: 5%;
+}
 }
      </style>
 <section id="nosotros" class="container-fluid">
@@ -66,42 +88,7 @@
         </ul>
       </div>
     </nav>
-       <!---
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto my-2 my-lg-0">
-            <li class="nav-item ">                   
-              <a class="nav-link" href="{{ route('nosotros')}}" style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;"> <img src="images/nosotros.png" alt="" width="28px" class="d-inline-block align-top">Nosotros </a>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link " href="#" style="border-bottom-right-radius: 15px; border-top-right-radius: 15px;"> <img src="images/pregunta.png" alt="" width="20px" class="d-inline-block align-top">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </nav> 
-      <nav class="navbar fixed-top navbar-expand-lg bg-light">
-        <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    -->
+     
     <div class="container" id="texto" style=" color:rgb(105, 105, 105); font-size: calc(0.5rem + 0.9vw);">
         <p>
             Somos tu mejor opción para viajar, con más de 5 años de experiencia
@@ -127,6 +114,30 @@
         </div>
     </div>
 </section>
+<section style="padding: 5%" id="esna">
+  <div class="row">
+    <div class="col-lg">
+      <p id="esnap"  style="text-aling:center"><b> Star Travel cuida...</b>   </p> 
+    </div>
+    {{-- comment --}}
+    
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <img src="images/Afiche-ESNNA-para-agencias-de-viajes.jpg" alt="" width="100%" >
+        </div>
+      </div>
+    </div>
+     {{-- comment --}}
+    <div class="col" id="imageEsna">
+     
+      <a type="button"  data-toggle="modal" data-target="#exampleModalCenter">
+       <img src="images/Afiche-ESNNA-para-agencias-de-viajes.jpg" alt="" width="70%" id="imagen">
+      </a>
+    </div>
+  </div>
+  
+</section>
 <section class="container-fluid footer">
   <div class="row " style="padding-left: 5%">
     <div class="col-lg">
@@ -134,7 +145,7 @@
       <br>
       <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
       <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
-      <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >ESNA  </a><a href="images/Afiche-ESNNA-para-agencias-de-viajes.jpg"target="_blank" style="color: white">(Ver afiche)</a><br>
+      <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >Protección de explotación infantil    </a><br>
       <a href="images/cokies-startravel-pagina-web-politica-2021.pdf" target="_blank" style="color: white">Politica de uso de cookies  </a><br>
       <a href="images/condiciones-de-tratamiento-de-datos-de-web-startravel.pdf" target="_blank" style="color: white">Declaración de Tratamiento de Datos
 Personales   </a><br>
