@@ -2,14 +2,47 @@
 <style>
 	@charset "utf-8";
 /* CSS Document */
-
+.responsive-iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.buscaador{
+      height: 1000px;
+    }
+     .subtitulo{
+      height: 1500px;
+    }
+@media(max-width:1000px) {
+    #nosotrosText,
+    #homeText,
+    #contactoText {
+        border-radius: 15px;
+        color: white;
+        margin-bottom: 1.5px;
+        padding-left: 5%;
+    }
+    .buscaador{
+      height: 1500px;
+    }
+     .subtitulo{
+      height: 1500px;
+    }
+}
 </style>
-<section class="buscaador">
-    <div class="subtitulo">
+<section class="buscaador" >
+    <div class="subtitulo"  >
       <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
       <hr id="subtibarra"> 
+      <iframe src="https://startravelperu.clickandbook.com" class="responsive-iframe" frameborder="0"></iframe>
+      {{-- comment 
         <iframe src="http://startravelperu.clickandbook.com"   frameborder="0"   style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
-</div>      
+--}}
+      </div>      
   </section>
 
   {{-- comment 

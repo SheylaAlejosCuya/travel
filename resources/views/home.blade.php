@@ -33,9 +33,31 @@ a{
 	max-height: 100%;
 	max-width: 100%;
 }
+.responsive-iframe {
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.buscaador{
+      height: 1000px;
+    }
+     .subtitulo{
+      height: 1500px;
+    }
 
+}
 
 @media(max-width:520px){
+    .buscaador{
+      height: 1500px;
+    }
+     .subtitulo{
+      height: 1500px;
+    }
   .model {
     height:300px;
     width: auto;
@@ -111,6 +133,7 @@ form{
 }
 
 }
+
 </style>
 
   {{-- comment 
@@ -156,6 +179,16 @@ form{
 
   </section>
 comment  --}} 
+<section class="buscaador" >
+  <div class="subtitulo"  >
+    <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
+    <hr id="subtibarra"> 
+    <iframe src="https://startravelperu.clickandbook.com" class="responsive-iframe" frameborder="0"></iframe>
+    {{-- comment 
+      <iframe src="http://startravelperu.clickandbook.com"   frameborder="0"   style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
+--}}
+    </div>      
+</section>
 @if(Session::has('flash_message'))
 <div class="alert alert-success" role="alert">
  <strong> <img src="images/comprobado.png" alt="" style="padding-left:15px; padding-right: 15px;"> {{Session::get('flash_message')}}</strong>
