@@ -40,7 +40,7 @@ a{
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 900px;
 }
 .buscaador{
       height: 1000px;
