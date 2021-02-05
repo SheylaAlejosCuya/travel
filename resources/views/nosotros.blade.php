@@ -117,7 +117,7 @@
 <section style="padding: 5%" id="esna">
   <div class="row">
     <div class="col-lg">
-      <p id="esnap"  style="text-aling:center"><b> Star Travel cuida...</b>   </p> 
+      <p id="esnap"  style="text-aling:center; padding-bottom: 15px;"><b> Star Travel no apoya la trata de personas, ni la explotación infantil.</b>   </p> 
     </div>
     {{-- comment --}}
     
