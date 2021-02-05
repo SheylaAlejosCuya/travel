@@ -14,7 +14,23 @@ a{
   height: 100%;
   width:auto; 
 }
+#logazo{
+  margin-top: -480px;
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
 
+@media(max-width:520px){
+
+ #logazo{
+margin-top: -300px;
+text-align: center;
+width: 300px;
+height: auto;
+}
+
+}
 .box{
   height:800px;
 	background-color:#ffffff;
@@ -45,19 +61,28 @@ a{
 .buscaador{
       height: 1000px;
     }
-     .subtitulo{
+.subtitulo{
       height: 1500px;
+      text-align: center;
     }
 
 }
 
+
 @media(max-width:520px){
+
     .buscaador{
       height: 1500px;
     }
      .subtitulo{
       height: 1500px;
     }
+     #logazo{
+    margin-top: -300px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+}
   .model {
     height:300px;
     width: auto;
@@ -67,6 +92,7 @@ a{
 .box{
   height: 300px;
 }
+
 }
 
 
@@ -183,10 +209,14 @@ comment  --}}
   <div class="subtitulo"  >
     <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
     <hr id="subtibarra"> 
-    <iframe src="https://startravelperu.clickandbook.com" class="responsive-iframe" frameborder="0"></iframe>
+    <iframe src="https://startravelperu.clickandbook.com" class="responsive-iframe" frameborder="0">
+    
+    </iframe>
+    <img src="images/logo-travel.png" alt="" id="logazo" >
     {{-- comment 
       <iframe src="http://startravelperu.clickandbook.com"   frameborder="0"   style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
 --}}
+
     </div>      
 </section>
 @if(Session::has('flash_message'))
