@@ -62,6 +62,10 @@
     }
     #esnap{
       padding-left: 5%;
+
+}
+#imageEsna{
+  margin-top: 5%;
 }
 }
      </style>
@@ -117,7 +121,7 @@
 <section style="padding: 5%" id="esna">
   <div class="row">
     <div class="col-lg">
-      <p id="esnap"  style="text-aling:center; padding-bottom: 15px;"><b> Star Travel no apoya la trata de personas, ni la explotación infantil.</b>   </p> 
+      <p id="esnap"  style="text-aling:center; padding-bottom: 15px;"><b> Ley de protección contra la trata de personas y explotación infantil.</b>   </p> 
     </div>
     {{-- comment --}}
     

@@ -28,7 +28,7 @@ class Queja extends Mailable
      */
     public function build()
     {
-        return $this->from('zurang.sheyla@gmail.com', env('MAIL_FROM_NAME'))
+        return $this->from('ventas1@startravelperu.com', env('MAIL_FROM_NAME'))
                     ->subject('Reclamo desde Star Travel')
                     ->view('mails.form-reclamo');
     }
