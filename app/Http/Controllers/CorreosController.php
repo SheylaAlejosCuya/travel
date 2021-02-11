@@ -19,7 +19,7 @@ class CorreosController extends Controller
             'subject' => 'required',
             'content' => 'required|min:3'
         ]);
-        Mail::to('zurang.sheyla@gmail.com')->send(new Contacto($mensaje));
+        Mail::to('ventas1@startravelperu.com')->send(new Contacto($mensaje));
         Session::flash('flash_message', 'Mensaje enviado, le responderemos en breve!');
         return redirect('contacto');   
         }
@@ -37,7 +37,7 @@ class CorreosController extends Controller
               'content' => 'required|min:3'
           ]);
      
-          Mail::to('zurang.sheyla@gmail.com')->send(new Reserva($vuelo));
+          Mail::to('ventas1@startravelperu.com')->send(new Reserva($vuelo));
           Session::flash('flash_message', 'Vuelo solicitado!');
             return redirect('home');  
 
@@ -61,7 +61,7 @@ class CorreosController extends Controller
                 
             ]);
        
-            Mail::to('zurang.sheyla@gmail.com')->send(new Queja($reclamo));
+            Mail::to('ventas1@startravelperu.com')->send(new Queja($reclamo));
             Session::flash('flash_message', 'Reclamo enviado.');
             return redirect('reclamo');   
             }
