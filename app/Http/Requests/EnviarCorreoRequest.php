@@ -48,7 +48,7 @@ class EnviarCorreoRequest extends FormRequest
             'numeroDoc.required' =>  __('Número de Documento es obligatorios'),
             'telefono.required' =>  __('Telefono es obligatorio'),
             'email.required' =>  __('Correo Electronico es obligatorio'),
-            'bien.required' =>  __('Slecciona un tipo de bien a reclamar.'),
+            'bien.required' =>  __('Selecciona un tipo de bien a reclamar.'),
             'monto.required' =>  __('Monto es obligatorio'),
             'DescProdu.required' =>  __('Descripción del producto o servicio es obligatorio'),
             'tipReclamo.required' =>  __('Seleccione un tipo de reclamo'),

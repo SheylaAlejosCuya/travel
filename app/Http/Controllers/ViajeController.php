@@ -11,7 +11,7 @@ class ViajeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('home','modal');
+      //  $this->middleware('auth')->except('home','modal');
 
     }
     /**
@@ -23,7 +23,7 @@ class ViajeController extends Controller
     public function index()
     {
         $viajes = Viaje::latest('updated_at','ASC')->get();
-        return view('index', compact('viajes'));
+        return view('flyers/index', compact('viajes'));
         
     }
     //////Para el publico////
@@ -50,7 +50,7 @@ class ViajeController extends Controller
     public function create()
     {
 
-        return view('create',[
+        return view('flyers/create',[
             'viaje' => new Viaje
         ]);
     }
@@ -81,7 +81,7 @@ class ViajeController extends Controller
     public function show(Viaje $viaje)
     {
 
-       return view('show', [
+       return view('flyers/show', [
            'viaje' => $viaje
        ]);
        
@@ -95,7 +95,7 @@ class ViajeController extends Controller
      */
     public function edit(Viaje $viaje)
     {
-        return view('edit', [
+        return view('flyers/edit', [
             'viaje' => $viaje
         ]);
     }

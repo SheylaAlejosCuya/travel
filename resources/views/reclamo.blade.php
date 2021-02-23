@@ -91,7 +91,7 @@ label, p, li{
  
    
     <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
-        <a class="navbar-brand" href="{{ route('travel')}}">
+      <a class="navbar-brand" href="{{ route('viaje.home')}}">
             <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
             
           </a>
@@ -104,7 +104,7 @@ label, p, li{
                 <a class="nav-link" href="{{ route('nosotros')}}" id="nosotrosText"> <img src="images/nosotros.png" width="30"  style="margin-right: 5px;" class="d-inline-block align-top" alt="">Nosotros </a>
               </li>
              <li class="nav-item">
-                <a class="nav-link " href="{{ route('viaje.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
+                <a class="nav-link " href="{{ route('package.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
               </li> 
               <li class="nav-item">
                 <a class="nav-link " href="{{ route('contacto')}}" id="contactoText"> <img src="images/pregunta.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Contacto</a>
@@ -280,7 +280,7 @@ label, p, li{
       <br>
       <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
       <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
-      <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >ESNA  </a><a href="images/Afiche-ESNNA-para-agencias-de-viajes.jpg"target="_blank" style="color: white">(Ver afiche)</a><br>
+      <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >Ley de Protección de explotación infantil  </a><a href="images/Afiche-ESNNA-para-agencias-de-viajes.jpg"target="_blank" style="color: white">(Ver afiche)</a><br>
       <a href="images/cokies-startravel-pagina-web-politica-2021.pdf" target="_blank" style="color: white">Politica de uso de cookies  </a><br>
       <a href="images/condiciones-de-tratamiento-de-datos-de-web-startravel.pdf" target="_blank" style="color: white">Declaración de Tratamiento de Datos
 Personales   </a><br>

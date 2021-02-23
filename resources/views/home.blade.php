@@ -32,7 +32,7 @@ height: auto;
 
 }
 .box{
-  height:800px;
+  height:auto;
 	background-color:#ffffff;
 	border-radius: 10px;
 	box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
@@ -290,42 +290,34 @@ comment  --}}
 
 
   <div class="container-fluid">
-		<!--slider------------------->
-		<ul id="autoWidth" class="cs-hidden">
-      
-		<!--1------------------------------>
-  <li class="item-a">
-
-    @forelse($viajes as $viaje)
-	  <!--slider-box-->
-		<div class="box">	
-    <!--model-->
-    <a type="button" class="btn_modal_mostrar" href="#"
-      data-title="{{$viaje->title}}"
-      data-descripcion="{{$viaje->descripcion}}"
-      data-image="{{ asset(Storage::url($viaje->image))}}"  > 
-    <img  src="{{ asset(Storage::url($viaje->image))}}" class="model" alt="..." > </a>
-    <!--details
-		<div class="details">		
-    <p>{{ $viaje->updated_at->diffForHumans()}}</p>
-    </a>
-		</div>-->
-  
-    </div>
-    
-
-
-    </li>
-    @empty
-    no hay viajes que mostrar
+    <div class="row row-cols-1 row-cols-md-4">
+      @forelse($viajes as $viaje)
+       <div class="col mb-4 " >
+         <div class="card box">
+           <a type="button" class="btn_modal_mostrar" href="#"
+           data-title="{{$viaje->title}}"
+           data-descripcion="{{$viaje->descripcion}}"
+           data-image="{{ asset(Storage::url($viaje->image))}}"  > 
+         <img  src="{{ asset(Storage::url($viaje->image))}}" class="model" alt="..." height="auto" style="height: auto"> </a>
+           
+         </div>
+         
+       </div>
+       @empty
+       no hay viajes que mostrar
+          
+      @endforelse
        
-   @endforelse
-		</ul>
-			
+       
+     </div>
 			
 	
 	
 	</div>
+  
+        {{-- Prube --}}
+      
+        
   @include('partials.modal')
 @include('partials.footer')
 

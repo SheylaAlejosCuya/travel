@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Mail\Contacto;
 use App\Mail\Reserva;
 use App\Mail\Queja;
+use App\Mail\ReservaPackage;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -13,16 +14,16 @@ class CorreosController extends Controller
 {
     public function contact(){
        
-       $mensaje=request()->validate([
-            'name' => 'required',
-            'email' => 'required|email', 
-            'subject' => 'required',
-            'content' => 'required|min:3'
+      $mensaje=request()->validate([
+        'name' => 'required',
+        'email' => 'required|email', 
+        'subject' => 'required',
+        'content' => 'required|min:3'
         ]);
         Mail::to('ventas1@startravelperu.com')->send(new Contacto($mensaje));
         Session::flash('flash_message', 'Mensaje enviado, le responderemos en breve!');
         return redirect('contacto');   
-        }
+    }
 
 
 
@@ -65,4 +66,22 @@ class CorreosController extends Controller
             Session::flash('flash_message', 'Reclamo enviado.');
             return redirect('reclamo');   
             }
+            public function reservaPaquete(){
+
+              $package=request()->validate([
+                  'nombre' => 'required',
+                'apellido' => 'required',
+                   'correo' => 'required|email',
+                  'telefono' => 'required',
+                  'package' => 'required',
+                  'content' => 'required|min:3'/**/
+              ]);
+         
+              Mail::to('zurang.sheyla@gmail.com')->send(new ReservaPackage($package));
+              Session::flash('flash_message', 'Paquete solicitado!');
+             // return response()->json("hecho");
+                return redirect('viajesPack');  
+
+    
+              }
 }
