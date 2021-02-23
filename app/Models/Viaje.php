@@ -12,4 +12,4 @@ class Viaje extends Model
     public function getRouteKeyName(){
         return 'id'; 
     }
-}
+} 

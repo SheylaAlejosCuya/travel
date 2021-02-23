@@ -22,7 +22,7 @@
     
       <header>
     <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
-      <a class="navbar-brand" href="{{ route('travel')}}">
+      <a class="navbar-brand" href="{{ route('viaje.home')}}">
           <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
           
         </a>
@@ -35,7 +35,7 @@
               <a class="nav-link" href="{{ route('nosotros')}}" id="nosotrosText"> <img src="images/nosotros.png" width="30"  style="margin-right: 5px;" class="d-inline-block align-top" alt="">Nosotros </a>
             </li>
            <li class="nav-item">
-              <a class="nav-link " href="{{ route('viaje.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
+              <a class="nav-link " href="{{ route('package.home')}}" id="homeText"> <img src="images/viajes.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Viajes</a>
             </li> 
             <li class="nav-item">
               <a class="nav-link " href="{{ route('contacto')}}" id="contactoText"> <img src="images/pregunta.png" alt="" width="20px" style="margin-right: 5px;" class="d-inline-block align-top">Contacto</a>

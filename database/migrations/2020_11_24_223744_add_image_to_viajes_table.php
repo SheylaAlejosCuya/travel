@@ -14,6 +14,7 @@ class AddImageToViajesTable extends Migration
     public function up()
     {
         Schema::table('viajes', function (Blueprint $table) {
+            $table->engine='InnoDB';
             $table->string('image')->after('title')->default('default.jpg');
         });
     }

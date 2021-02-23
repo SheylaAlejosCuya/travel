@@ -16,10 +16,14 @@
   <img src="images/logo-travel.png" alt="" width="200px">
 
 
+
   <hr>
-  <a href="{{route('viaje.create')}}">Crear nuevo viaje</a>
+  <a href="{{route('viaje.index')}}">Flyers</a>
+   <hr>
+  <a href="{{route('country.index')}}">Categorias</a>
   <hr>
-  <a href="{{route('viaje.index')}}">Viajes</a>
+  <a href="{{route('package.index')}}">Paquetes</a>
+ 
  
   @guest
   <hr>

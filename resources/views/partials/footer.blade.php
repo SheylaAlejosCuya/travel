@@ -5,7 +5,7 @@
         <br>
         <a href="{{ route('nosotros')}}" style="color: white">¿Quiénes Somos?</a><br>
         <a href="{{ route('contacto')}}" style="color: white">Contáctanos</a><br>
-        <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >Protección de explotación infantil    </a><br>
+        <a href="images/ESNNA-RM_430-2018-MINCETUR.pdf" style="color: white"  target="_blank" >Ley de Protección de explotación infantil    </a><br>
         <a href="images/cokies-startravel-pagina-web-politica-2021.pdf" target="_blank" style="color: white">Politica de uso de cookies  </a><br>
         <a href="images/condiciones-de-tratamiento-de-datos-de-web-startravel.pdf" target="_blank" style="color: white">Declaración de Tratamiento de Datos
 Personales   </a><br>
