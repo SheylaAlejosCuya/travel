@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'zurang.sheyla@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'ventas1@startravelperu.com'),
         'name' => env('MAIL_FROM_NAME', 'Star Travel'),
     ],
 
