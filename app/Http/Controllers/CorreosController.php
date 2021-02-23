@@ -77,7 +77,7 @@ class CorreosController extends Controller
                   'content' => 'required|min:3'/**/
               ]);
          
-              Mail::to('zurang.sheyla@gmail.com')->send(new ReservaPackage($package));
+              Mail::to('ventas1@startravelperu.com')->send(new ReservaPackage($package));
               Session::flash('flash_message', 'Paquete solicitado!');
              // return response()->json("hecho");
                 return redirect('viajesPack');  
