@@ -4,13 +4,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_slider.css"/>
-    <link rel="stylesheet" href="css/lightslider.css"/>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style_slidesr.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/lightslider.css')}}"/>
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-   
+  
 
     <title>Travel</title>
     <link rel="shortcut icon" href="images/logo-travel.png" />
@@ -22,7 +22,7 @@
     
       <header>
     <nav class="navbar navbar-light navbar-expand-lg bg-ligth">
-      <a class="navbar-brand" href="{{ route('viaje.home')}}">
+      <a class="navbar-brand" href="{{ route('travel')}}">
           <img src="images/logo-travel.png" width="200"  class="d-inline-block align-top" alt="" loading="lazy">
           
         </a>

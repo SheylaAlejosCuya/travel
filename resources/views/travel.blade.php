@@ -33,17 +33,46 @@
       height: 1500px;
     }
 }
+
+#loader {
+  margin: 100px auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #1a3898;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 </style>
+
+
+
 <section class="buscaador" >
     <div class="subtitulo"  >
       <h1><b> Encuentra cientos de vuelos a la vez</b></h1>
-      <hr id="subtibarra"> 
-      <iframe src="https://startravelperu.clickandbook.com" class="responsive-iframe" frameborder="0"></iframe>
-      {{-- comment 
+      <hr id="subtibarra">
+      <div id="loader"></div>
+        <!-- <iframe src="https://startravelperu.clickandbook.com/"  frameborder="0" style="overflow:hidden;height:100%;width:100%;min-height:700px;" height="100%" width="100%"></iframe> -->
+        <iframe src="https://adacavero.clickandbook.com/" id="responsive-iframe" style="display:none" onload="iframeloaded()" class="responsive-iframe" frameborder="0" style="overflow:hidden;height:100%;width:100%;min-height:700px;" height="100%" width="100%"></iframe>
+
+          {{-- comment 
         <iframe src="http://startravelperu.clickandbook.com"   frameborder="0"   style="overflow:hidden; height:100%; width:100%; min-height:500px;"></iframe>
---}}
+      --}}
       </div>      
-  </section>
+</section>
 
   {{-- comment 
   <section class="container-fluid viajes">
@@ -213,7 +242,14 @@ comment  --}}
       $('#imagen').attr('src', $(this).data('image'));
   });
 
- 
+  function iframeloaded(){
+    $('#loader').fadeOut();
+    $('.responsive-iframe').delay(500).fadeIn(1000);
+    console.log("iframe loaded successfully");
+  }
+
+
+
 </script>
 
 {{-- MOdal --}}

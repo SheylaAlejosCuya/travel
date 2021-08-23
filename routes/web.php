@@ -5,7 +5,7 @@ use App\Http\Controllers\ViajeController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\CorreosController;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +72,4 @@ Route::post('/viajesPack', [CorreosController::class, 'reservaPaquete'])->name('
 
 //login routes
 Auth::routes();
- 
+
